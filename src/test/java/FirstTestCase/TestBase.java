@@ -95,6 +95,11 @@ public class TestBase {
         SelenideElement randCard = $(clickRandomCards.get(i));
         randCard.closest(".item").scrollIntoView(true);
         randCard.click();
+        SelenideElement mfpClose = $x("//button[@class = \"mfp-close\"]");
+        SelenideElement mfpContent = $x("//div[@class = \"mfp-content\"]");
+        if (mfpContent.exists()){
+            mfpClose.hover().click();
+        }
 
 
     }
